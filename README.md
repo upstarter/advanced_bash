@@ -202,7 +202,7 @@ echo ${array[@]} # print array indexes
 ## Brace Expansion
 May be nested and combined
 ```bash
-prefix{ab,dc,ef}suffix
+echo prefix{ab,dc,ef}suffix
 ```
 
 ### Sequence Generation
@@ -259,9 +259,9 @@ esac
 => o* # (most specific)
 ```
 ## General Bash
-Declaring a variable looks like this: Variable="Some string"
+Declaring a variable looks like this: Variable="Some string".
 
-But not like this:
+But not like this (with whitespace):
 ```bash
 Variable = "Some string"
 # => returns error "Variable: command not found"
@@ -270,10 +270,12 @@ Variable = "Some string"
 Bash will decide that Variable is a command it must execute and give an error because it can't be found.
 
 Nor like this:
+
+```bash
 Variable= 'Some string' # => returns error: "Some string: command not found"
+```
 
-
-Bash will decide that 'Some string' is a command it must execute and give an error because it can't be found.
+Bash will decide that `'Some string'` is a command it must execute and give an error because it can't be found.
 
 *(In this case the 'Variable=' part is seen as a variable assignment valid only for the scope of the 'Some string' command.)*
 
@@ -289,6 +291,7 @@ echo '$Variable' # => $Variable
 
 ### String substitution in variables
 This will substitute the first occurrence of "Some" with "A"
+
 ```bash
 echo ${Variable/Some/A} # => A string
 ```
