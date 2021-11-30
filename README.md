@@ -11,6 +11,10 @@ Advanced Bash Quickstart
 !! # Expansion of previous command
 !!:gs/log/lse/ # global substitution of last command
 
+## General Tricks
+1. `ctl-x-e` opens an empty editor where your can paste and edit a command. When editor is quit command is placed at prompt for execution.
+2. `!<chars>` brings up last command beginning with <chars> for execution
+
 ## Usage
 # check number of commits to each file in a directory
 git rev-list @ -- $file
