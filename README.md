@@ -7,13 +7,14 @@ Advanced Bash Quickstart
 2. Always break full script down into functions
 3. Learn **readline** for nav and editing
 4. Use Alt-^ to expand shell from `!!`
-```bash
-!! # Expansion of previous command
-!!:gs/log/lse/ # global substitution of last command
 
 ## General Tricks
 1. `ctl-x-e` opens an empty editor where your can paste and edit a command. When editor is quit command is placed at prompt for execution.
 2. `!<chars>` brings up last command beginning with <chars> for execution
+
+```bash
+!! # Expansion of previous command
+!!:gs/log/lse/ # global substitution of last command
 
 ## Usage
 # check number of commits to each file in a directory
