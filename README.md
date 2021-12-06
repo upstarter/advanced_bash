@@ -11,7 +11,7 @@ Advanced Bash Quickstart
 ## General Tricks
 1. `ctl-x-e` opens an empty editor where your can paste and edit a command. When editor is quit command is placed at prompt for execution.
 2. `!<chars>` brings up last command beginning with `<chars>` for execution
-3. pass results of grep to a command: `pip list --format=freeze | grep tensorboard | xargs pip uninstall -y`
+3. pass results of filter to a command: `pip list --format=freeze | grep tensorboard | xargs pip uninstall -y`
 
 ```bash
 !! # Expansion of previous command
